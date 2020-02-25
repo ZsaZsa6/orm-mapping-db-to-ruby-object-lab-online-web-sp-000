@@ -58,7 +58,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      COUNT (number)
+      COUNT number
 
     SQL
     DB[:conn].execute(sql)
