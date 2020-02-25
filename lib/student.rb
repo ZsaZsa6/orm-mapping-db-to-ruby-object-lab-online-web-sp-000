@@ -58,6 +58,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
+      GROUP BY grade
       HAVING COUNT = number
 
     SQL
