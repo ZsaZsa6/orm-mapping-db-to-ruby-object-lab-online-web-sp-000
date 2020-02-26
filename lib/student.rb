@@ -55,7 +55,7 @@ class Student
 
   def self.first_X_students_in_grade_10(size)
     sql = <<-SQL
-      SELECT COUNT(size)
+      SELECT *
       FROM students
       WHERE grade = 10
       GROUP BY id
