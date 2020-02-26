@@ -55,14 +55,15 @@ class Student
 
   def self.first_X_students_in_grade_10(size)
     sql = <<-SQL
-      SELECT COUNT(grade)
+      SELECT COUNT(size)
       FROM students
       WHERE grade = 10
+      GROUP BY id
 
     SQL
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end.size
+    end
   end
 
   def self.first_student_in_grade_10
