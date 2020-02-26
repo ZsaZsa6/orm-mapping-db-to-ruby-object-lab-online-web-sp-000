@@ -59,7 +59,7 @@ class Student
       FROM students
       WHERE grade = 10
       ORDER BY id DESC
-      LIMIT size
+      LIMIT 1 OFFSET size
 
     SQL
     DB[:conn].execute(sql).map do |row|
@@ -72,7 +72,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      LIMIT 1, OFFSET 1
+      LIMIT 1
     SQL
 
     DB[:conn].execute(sql).map do |row|
