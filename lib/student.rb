@@ -60,7 +60,6 @@ class Student
       WHERE grade = 10
       ORDER BY id
       LIMIT ?
-
     SQL
     DB[:conn].execute(sql, size).map do |row|
       self.new_from_db(row)
