@@ -53,12 +53,12 @@ class Student
     end
   end
 
-  def self.first_X_students_in_grade_10(size)
+  def self.first_X_students_in_grade_10(number)
     sql = <<-SQL
       SELECT COUNT(grade)
       FROM students
       WHERE grade = 10
-      LIMIT size
+      LIMIT
     SQL
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
