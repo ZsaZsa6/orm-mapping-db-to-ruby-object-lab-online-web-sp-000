@@ -58,7 +58,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      ORDER BY id, DESC
+      ORDER BY id DESC
 
     SQL
     DB[:conn].execute(sql).map do |row|
